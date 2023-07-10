@@ -17,29 +17,31 @@
             width: 100%;
             /* border: 5px solid black; */
             display: flex;
-            justify-content: space-around;
-            
+            justify-content: space-evenly;
+
         }
 
         #add-form {
             width: 30%;
-            border: 1px solid rgb(27, 26, 26);
+            border: 2px solid rgb(27, 26, 26);
             /* padding: 4%; */
             margin: 4%;
+            /* background-color: skyblue; */
+            margin-left: 10%;
+            height: 50%;
         }
 
-        #form{
+        #form {
             /* border: 1px solid rgb(22, 94, 143); */
             margin: auto;
             align-items: center;
             padding: 10%;
-            background-color: rgba(92, 89, 89, 0.082);
         }
 
         #form>label {
             /* margin-bottom: 55px; */
             font-size: 2vw;
-            color: #457194; 
+            color: #457194;
         }
 
         #form>input {
@@ -49,23 +51,46 @@
             margin-bottom: 5%;
             padding: 2%;
             font-size: 1.3vw;
-            border: 1px solid #457194;
-            outline: none;
+            border: 2px solid rgb(52, 173, 221);
+            /* outline: none; */
         }
 
         #form>input:nth-child(9) {
             width: 35%;
-            margin-left: 35%;
+            margin-left: 33%;
             margin-top: 5%;
             font-size: 1.5vw;
             font-weight: 600;
             color: whitesmoke;
-            background-color: #0daabe;
-            border-radius: 2px;
+            background-color: rgb(52, 173, 221);
         }
-        #show-form {
-            width: 55%;
-            border: 5px solid rgb(21, 135, 201);
+
+        #show-table {
+            width: 50%;
+            border: 2px solid rgb(27, 26, 26);
+            margin: 4%;
+            margin-right: 10%;
+        }
+        
+        #air-table {
+            border-collapse: collapse;
+            font-size: 1.3vw;
+            font-family: sans-serif;
+            min-width: 100%;
+            margin: auto;
+            padding: 10%;
+        }
+
+        #air-table thead tr {
+            background-color: rgb(52, 173, 221);;
+            color: #ffffff;
+            border: none;
+        }
+
+        #air-table th,
+        #air-table td {
+            padding: 3% 3%;
+            text-align: center;
         }
     </style>
 </head>
@@ -83,8 +108,109 @@
             </form>
         </div>
 
-        <div id="show-form">
+        <div id="show-table">
+            <table id="air-table">
+                <thead>
+                    <tr>
+                        <th>Sr.No.</th>
+                        <th>Airline Name</th>
+                        <th>Airline Id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
+                    <tr>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                        <td>1jhg</td>
+                    </tr>
 
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
