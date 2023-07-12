@@ -11,17 +11,18 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-        }
+        } 
 
 
         #container {
             width: 100%;
             position: relative;
             background-repeat: no-repeat;
-            height: 700px;
+            height: 625px;
             background-image: url("https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&w=600");
             background-size: cover;
             background-position: center;
+            font-size: 1.5vw;
         }
 
         #form-container {
@@ -41,34 +42,30 @@
             border: 1px solid white;
             /* height: 500px; */
             margin: auto;
-            margin-top: 20%;
+            margin-top: 10%;
             /* display: grid; */
             align-items: center;
-            padding: 14%;
+            padding: 12%;
             background-color: rgba(255, 255, 255, 0.8);
 
-        }
-
-        #form>label {
-            font-size: large;
-            color: #457194;
         }
 
         #form>input {
             /* padding: 1e30%m 5em; */
             width: 100%;
-            height: 2.5em;
+            /* height: 33%; */
             padding: 2%;
-            font-size: 1em;
+            font-size: 1.2vw;
             border: 1px solid #457194;
             outline: none;
+            margin-bottom: 6%;
         }
 
-        #form>input:nth-child(9) {
+        #form>input:nth-child(13) {
             width: 35%;
             margin-left: 35%;
-            margin-top: 10%;
-            font-size: 15px;
+            margin-top: 3%;
+            font-size: 1vw;
             font-weight: 600;
             color: whitesmoke;
             background-color: #457194;
@@ -77,8 +74,8 @@
         }
 
         #form>p:last-child {
-            margin-top: 6%;
-            font-size: small;
+            margin-top: 3%;
+            font-size: 1vw;
             text-align: center;
 
         }
@@ -94,17 +91,15 @@
     <div id="container">
         <div id="form-container">
             <form action=" " id="form">
-                <label for="">Username</label> <br>
-                <input type="text" placeholder="Enter your name"> <br>
-                <label for="">Password</label> <br>
-                <input type="password" placeholder="Enter your password"> <br>
-                <label for="">Username</label> <br>
-                <input type="text" placeholder="Enter your name"> <br>
-                <label for="">Username</label> <br>
-                <input type="text" placeholder="Enter your name"> <br>
-                <input type="submit" value="Login">
+                <input type="text" placeholder="Enter FullName" name="userFullName"> <br>
+                <input type="text" placeholder="Enter Contact" name="userContact"> <br>
+                <input type="text" placeholder="Enter Gender" name="gender"> <br>
+                <input type="date" placeholder="Enter DOB" name="dob"> <br>
+                <input type="email" placeholder="Enter G-Mail" name="userGmail"> <br>
+                <input type="password" placeholder="Enter Password" name="userPassword"> <br>
+                <input type="submit" value="Register">
 
-                <p>Haven't registered yet? <a href="login.html">Register here</a></p>
+                <p>Registered Already? <a href="login.html">Login</a></p>
 
             </form>
         </div>

@@ -16,7 +16,7 @@
 
         #container {
             width: 100%;
-            /* border: 5px solid black; */
+            border: 5px solid black;
             display: flex;
             justify-content: space-evenly;
             position: relative;
@@ -38,7 +38,7 @@
 
         #form {
             /* border: 1px solid rgb(22, 94, 143); */
-            margin: auto;
+            /* margin: auto; */
             /* align-items: center; */
             padding: 10%;
         }
@@ -80,22 +80,25 @@
         }
 
         #show-table {
-            width: 50%;
-            /* border: 2px solid rgb(27, 26, 26); */
+            width: 70%;
+            border: 2px solid rgb(27, 26, 26);
             margin: 4%;
             margin-right: 10%;
             overflow-y: auto;
             height: 512px;
+            overflow: hidden;
         }
         
         #air-table {
-            background-color: rgba(255, 255, 255, 0.671);
+            /* background-color: rgba(255, 255, 255, 0.671); */
             border-collapse: collapse;
             font-size: 1.3vw;
             font-family: sans-serif;
-            min-width: 100%;
+            /* min-width: 100%; */
             margin: auto;
             padding: 10%;
+            /* word-wrap: break-word; */
+            width: 100%;
         }
 
         #air-table thead tr {
@@ -111,10 +114,24 @@
             padding: 3% 3%;
             text-align: center;
             border: 2px solid black;
+            /* word-wrap: break-word; */
+            width: 100%;
+           
+        }
+
+        #air-table>thead>tr>th:nth-child(1),th:nth-child(3),th:nth-child(4){
+            width: 15%;
+        }
+        #air-table>thead>tr>th:nth-child(2){
+            width: 50%;
+            word-wrap: break-word;
+        }
+        #air-table>tbody>tr>td:nth-child(2){
+            width: 30%;
+            /* word-wrap: break-word; */
         }
     </style>
 </head>
-
 <body>
     <div id="container">
 
@@ -137,10 +154,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="t" items="${t}">
+                <!-- <c:forEach var="t" items="${t}"> -->
                     <tr>
-                        <td>${t.getAirlineId()}</td>
-                        <td>${t.getAirlineName()}</td>
+                        <td>1</td>
+                        <td>dddjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkd</td>
                         <td><a
                             href="getEditAirline?AirlineId=${t.getAirlineId()}"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>
@@ -148,7 +165,7 @@
                             href="deleteAirline?AirlineId=${t.getAirlineId()}"><i class="fa-solid fa-trash-can" style="color: #ed071e;"></i></a>
                         </td>
                     </tr>
-                </c:forEach>
+                <!-- </c:forEach> -->
                 </tbody>
             </table>
         </div>
