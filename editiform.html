@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 30%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #070707;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+
+      input[type="datetime-local"] {
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        margin-left: 40%;
+        width: 20%;
+        background-color: rgb(42, 233, 42);
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="select1">Airline:</label>
+      <select class="input-field">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+
+      <br />
+
+      <label for="inputText">Plane No:</label>
+      <input type="text" id="inputText" class="input-field" />
+
+      <br />
+
+      <label for="select2">Departure Loaction:</label>
+      <select id="select2" class="input-field">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+
+      <label for="select3">Arrival Location:</label>
+      <select id="select3" class="input-field">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+
+      <br />
+
+      <label for="dateTime1">Departure Date/Time:</label>
+      <input type="datetime-local" id="dateTime1" class="input-field" />
+
+      <label for="dateTime2">Departure Date/Time 2:</label>
+      <input type="datetime-local" id="dateTime2" class="input-field" />
+
+      <br />
+
+      <label for="inputText1">Seats:</label>
+      <input type="text" id="inputText1" class="input-field" />
+
+      <label for="inputText2">Price:</label>
+      <input type="text" id="inputText2" class="input-field" />
+
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

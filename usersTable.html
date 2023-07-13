@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <script src="https://kit.fontawesome.com/1f3c3cb2ad.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        #screen {
+            width: 100%;
+            /* position: fixed; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(./img/bg1.jpg);
+            background-position: center;
+        }
+
+        #show-table {
+            width: 94%;
+            /* border: 2px solid rgb(27, 26, 26); */
+            margin: auto;
+            overflow-y: auto;
+            height: 600px;
+            /* overflow: hidden; */
+        }
+
+        #air-table {
+            background-color: rgba(255, 255, 255, 0.671);
+            border-collapse: collapse;
+            font-size: 1.3vw;
+            font-family: sans-serif;
+            margin: auto;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        #air-table thead tr {
+            font-weight: bold;
+            background-color: rgb(52, 173, 221);
+            color: #ffffff;
+            border: none;
+            border-bottom: 1px solid black;
+
+        }
+
+        #air-table th,
+        #air-table td {
+            text-align: center;
+            border: 1px solid black;
+            word-wrap: break-word;
+            padding: 1%;
+        }
+
+        #air-table tbody tr {
+            border-bottom: 1px solid black;
+        }
+
+        #air-table thead th:nth-child(1),
+        th:nth-child(8),
+        th:nth-child(9) {
+            width: 7%;
+        }
+
+        #air-table thead th:nth-child(4) {
+            width: 8%;
+        }
+
+        #air-table thead th:nth-child(5) {
+            width: 10%;
+        }
+
+        #air-table thead th:nth-child(3),
+        th:nth-child(7) {
+            width: 12%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="show-table">
+            <table id="air-table">
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Full Name</th>
+                        <th>Contact</th>
+                        <th>Gender</th>
+                        <th>D.O.B</th>
+                        <th>G-Mail</th>
+                        <th>Balance</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <c:forEach var="t" items="${t}"> -->
+                    <tr>
+                        <td>1</td>
+                        <td>Dharmendra Vishwakarma Vishwakarma</td>
+                        <td>1234567890</td>
+                        <td>Male</td>
+                        <td>12:09:2000</td>
+                        <td>dVishwakarma@gamil.com</td>
+                        <td>123456784567</td>
+                        <td><a href="getEditAirline?AirlineId=${t.getAirlineId()}"><i
+                                    class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
+                        <td><a href="deleteAirline?AirlineId=${t.getAirlineId()}"><i class="fa-solid fa-trash-can"
+                                    style="color: #ed071e;"></i></a>
+                        </td>
+                    </tr>
+                    <!-- </c:forEach> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

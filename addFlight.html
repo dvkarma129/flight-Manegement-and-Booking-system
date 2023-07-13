@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 2%;
+      }
+
+      .form-group {
+        margin-bottom: 5%;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      select,
+      input[type="text"],
+      input[type="datetime-local"] {
+        width: 100%;
+        padding: 5px;
+      }
+
+      input[type="text"]{
+        width: 96.5%;
+      }
+
+      .side-by-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .side-by-side label,
+      .side-by-side input {
+        width: calc(50% - 5px);
+        /* margin-right: 5px; */
+      }
+
+      input[type="submit"] {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="select1">Select Option:</label>
+        <select id="select1">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="inputText">Text Input:</label>
+        <input type="text" id="inputText" />
+      </div>
+
+      <div class="form-group">
+        <div class="side-by-side">
+          <label for="select2">Select Option 1:</label>
+          <select id="select2">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+
+        <div class="side-by-side">
+          <label for="select3">Select Option 2:</label>
+          <select id="select3">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="side-by-side">
+          <label for="dateTime1">Date &amp; Time 1:</label>
+          <input type="datetime-local" id="dateTime1" />
+        </div>
+
+        <div class="side-by-side">
+          <label for="dateTime2">Date &amp; Time 2:</label>
+          <input type="datetime-local" id="dateTime2" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="side-by-side">
+          <label for="text1">Text 1:</label>
+          <input type="text" id="text1" />
+        </div>
+
+        <div class="side-by-side">
+          <label for="text2">Text 2:</label>
+          <input type="text" id="text2" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
