@@ -23,11 +23,15 @@
             display: flex;
             justify-content: space-evenly;
             position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(../image/bg1.jpg);
+            background-position: center;
         }
 
         #add-form {
-            width: 30%;
-            border: 1px solid #afa9a9;
+            width: 25%;
+            border: 2px solid rgb(27, 26, 26);
             /* padding: 4%; */
             margin: 4%;
             background-color: rgba(255, 255, 255, 0.671);
@@ -56,31 +60,30 @@
         }
 
         #form>input {
-            width: 96%;
+            width: 94%;
             height: 2.5em;
             margin-top: 3%;
             margin-bottom: 5%;
             padding: 2%;
             font-size: 1.3vw;
-            border: 1px solid #afa9a9;
+            border: 2px solid rgb(52, 173, 221);
             /* outline: none; */
         }
 
-        #form>input:nth-child(4) {
+        #form>input:nth-child(6) {
             width: 35%;
             margin-left: 33%;
             margin-top: 5%;
             font-size: 1.5vw;
             font-weight: 600;
-            color: black;
-            border-radius: 10px;
-            background-color: #f2f2f2;
-            border: 1px solid #afa9a9;
+            color: whitesmoke;
+            background-color: #67b3e6;
+            border: 2px solid rgb(10, 10, 10);
 
         }
 
         #show-table {
-            width: 65%;
+            width: 55%;
             /* border: 2px solid rgb(27, 26, 26); */
             margin: 4%;
             margin-right: 10%;
@@ -93,63 +96,29 @@
             border-collapse: collapse;
             font-size: 1.3vw;
             font-family: sans-serif;
-            width: 100%;
+            min-width: 100%;
             margin: auto;
-            padding: 10%;
+            padding: 10%; 
         }
 
-        table {
-        width: 100%;
-        border-collapse: collapse;
-      }
+        #air-table thead tr {
+            background-color: rgb(52, 173, 221);
+            color: #ffffff;
+            border: none;
+            border: 2px solid black;
+            /* position: fixed; */
+        }
 
-      th,
-      td {
-        padding: 2%;
-        text-align: center;
-        border: 1px solid #afa9a9;
-      }
-
-      th {
-        background-color: #f2f2f2;
-        font-size: 1.5vw;
-      }
-
-      th:nth-child(2),
-      td:nth-child(2) {
-        width: 35%;
-      }
-
-      td:nth-child(2) {
-        text-align: left;
-        line-height: 30px;
-      }
-
-      td:last-child {
-        text-align: center;
-      }
-
-      #top-info > div:nth-child(2) > button:hover {
-        background-color: rgb(245, 239, 239);
-        color: black;
-      }
-      #action {
-        width: 100%;
-      }
-
-      #action > span:nth-child(1) {
-        border: 2px solid blue;
-        padding: 4%;
-        border-radius: 4px;
-        color: blue;
-      }
-
-      #action > span:nth-child(2) {
-        border: 2px solid red;
-        padding: 4%;
-        border-radius: 4px;
-        color: red;
-      }
+        #air-table th,
+        #air-table td {
+            padding: 3% 3%;
+            text-align: center;
+            border: 2px solid black;
+        }
+        
+        #air-table>thead>tr>th:nth-child(1),th:nth-child(4),th:nth-child(5){
+            width: 12%;
+        }
     </style>
 </head>
 <%@ include file="navbar.jsp" %>
@@ -157,9 +126,10 @@
     <div id="container">
 
         <div id="add-form">
-            <form method="post" action="/Admin/newAirline" id="form">
-                <h1>New Airline</h1>
-                <input type="text" placeholder="Airline name eg: Airasia" name="airlineName" required><br>
+            <form method="post" action="/Admin/newAirport" id="form">
+                <h1>New Airport</h1>
+                <input type="text" placeholder="Add airportName" name="airportName" required><br>
+                <input type="text" placeholder="Add airportLocation" name="airportLocation" required><br>
                 <input type="submit" value="Add">
             </form>
         </div>
@@ -169,20 +139,23 @@
                 <thead>
                     <tr>
                         <th>Sr.No.</th>
-                        <th>Airline Name</th>
-                        <th>Action</th>
+                        <th>AirPort Name</th>
+                        <th>Location</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="a" items="${a}">
+                <c:forEach var="ap" items="${ap}">
                     <tr>
-                        <td>${a.getAirlineId()}</td>
-                        <td>${a.getAirlineName()}</td>
-                        <td>
-                           <div id="action">
-                             <span><a href="getEditAirline?AirlineId=${a.getAirlineId()}"><i class="fa-solid fa-pen-to-square"></i></a></span>
-                             <span><a href="deleteAirline?AirlineId=${a.getAirlineId()}"><i class="fa-solid fa-trash-can" style="color: #ed071e;"></i></a></span>
-                           </div>
+                        <td>${ap.getAirportId()}</td>
+                        <td>${ap.getAirportName()}</td>
+                        <td>${ap.getAirportLocation()}</td>
+                        <td><a
+                            href="editAirport?AirportId=${ap.getAirportId()}"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
+                        <td><a 
+                            href="deleteAirport?AirportId=${ap.getAirportId()}"><i class="fa-solid fa-trash-can" style="color: #ed071e;"></i></a>
                         </td>
                     </tr>
                 </c:forEach>
