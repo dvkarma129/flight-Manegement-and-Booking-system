@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Keep</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f8f8;
-      }
 
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Keep</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
 
-      .note {
-        width: 300px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        margin: 10px;
-        padding: 16px;
-      }
+    #screen{
+      /* border: 1px solid black; */
+      width: 100%;
 
-      .note h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
+    }
 
-      .note p {
-        font-size: 14px;
-        margin-bottom: 16px;
-      }
+    form{
+      width: 35%;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 5%;
+      padding: 16px;
+      margin-left: 32%;
+    }
 
-      .note button {
-        background-color: #4285f4;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        padding: 8px 12px;
-        font-size: 14px;
-        cursor: pointer;
-      }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 20px;
+    }
 
-      .note button:hover {
-        background-color: #3367d6;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>
-          This is the content of the note.This is the content of the note.This
-          is the content of the note.This is the content of the note.This is the
-          content of the note.This is the content of the note.This is the
-          content of the note.This is the content of the note.
-        </p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
-      <div class="note">
-        <h3>Note Title</h3>
-        <p>This is the content of the note.</p>
-        <button>Delete</button>
-      </div>
+    input[type="text"],
+    textarea {
+      width: 95%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-      <div class="note">
-        <h3>Another Note</h3>
-        <p>Here's another note with some content.</p>
-        <button>Delete</button>
-      </div>
+    textarea {
+      resize: vertical;
+      height: 50px;
+      margin-bottom: 5%;
+    }
 
-      <!-- Add more notes here -->
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      width: 95%;
+    }
+
+    #note {
+      width: 300px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      padding: 16px;
+    }
+
+    #note h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #note p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      float: right;
+    }
+
+    button:hover {
+      background-color: #3367d6;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="screen">
+    <div id="add-new-notes">
+      <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+          <button type="submit">Submit</button>       
+      </form>
     </div>
-  </body>
+
+    <div id="container">
+      <div id="note">
+        <h3>Note Title</h3>
+        <p>This is the content of the note.</p>
+        <button>Delete</button>
+      </div>
+      <div id="note">
+        <h3>Note Title</h3>
+        <p>This is the content of the note.</p>
+        <button>Delete</button>
+      </div>
+      <div id="note">
+        <h3>Note Title</h3>
+        <p>This is the content of the note.</p>
+        <button>Delete</button>
+      </div>
+      <div id="note">
+        <h3>Note Title</h3>
+        <p>This is the content of the note.</p>
+        <button>Delete</button>
+      </div>
+      <div id="note">
+        <h3>Note Title</h3>
+        <p>This is the content of the note.</p>
+        <button>Delete</button>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
