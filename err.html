@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Keep Clone</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="NoteController">
+    <h1>Google Keep Clone</h1>
+    <ul>
+        <li ng-repeat="note in notes">
+            <h3>{{note.title}}</h3>
+            <p>{{note.content}}</p>
+            <button ng-click="deleteNote(note.id)">Delete</button>
+        </li>
+    </ul>
+    <form ng-submit="addNote()">
+        <input type="text" ng-model="newNote.title" placeholder="Title" required><br>
+        <textarea ng-model="newNote.content" placeholder="Content" required></textarea><br>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <script>
+        angular.module('myApp', [])
+                .controller('NoteController', function ($scope, $http) {
+                    $scope.notes = [];
+                    $scope.newNote = {};
+
+                    $http.get('/api/notes').then(function (response) {
+                        $scope.notes = response.data;
+                    });
+
+                    $scope.addNote = function () {
+                        $http.post('/api/notes', $scope.newNote).then(function (response) {
+                            $scope.notes.push(response.data);
+                            $scope.newNote = {};
+                        });
+                    };
+
+                    $scope.deleteNote = function (id) {
+                        $http.delete('/api/notes/' + id).then(function () {
+                            $scope.notes = $scope.notes.filter(function (note) {
+                                return note.id !== id;
+                            });
+                        });
+                    };
+                });
+    </script>
+</body>
+</html>
