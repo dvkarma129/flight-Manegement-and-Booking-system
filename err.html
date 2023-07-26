@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Google Keep Navbar Clone</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f8f9fa;
+		}
+
+		.navbar {
+			border: 3px solid #f1f3f4;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: white;
+			height: 50px;
+			padding: 5px 16px;
+			position: sticky;
+		}
+
+		.logo-container {
+			/* border: 1px solid rgb(206, 26, 26); */
+			display: flex;
+			align-items: center;
+			width: 15%;
+			margin-left: 20px;
+		}
+
+		.logo {
+			width: 40px;
+			height: 40px;
+			margin-right: 8px;
+			cursor: pointer;
+
+		}
+
+		.logo-text {
+			font-weight: bold;
+			font-size: 20px;
+			color: #4d4e4e;
+			cursor: pointer;
+
+		}
+
+		.search-bar-container {
+			/* border: 1px solid rgb(9, 12, 156); */
+			flex: 1;
+			display: flex;
+			align-items: center;
+			width: 65%;
+			/* justify-content: center; */
+		}
+
+		.search-bar {
+			outline: none;
+			width: 100%;
+			max-width: 700px;
+			padding: 8px 16px;
+			border: none;
+			border-radius: 8px;
+			background-color: #f1f3f4;
+			font-size: 16px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+			height: 30px;
+		}
+
+		.profile-container {
+			display: flex;
+			align-items: center;
+			/* border: 1px solid rgb(13, 199, 44); */
+			width: 3%;
+			margin-right: 30px;
+
+		}
+
+		.profile-picture {
+			cursor: pointer;
+			width: 70px;
+			height: 40px;
+			border-radius: 50%;
+			border: 2px solid #ffffff;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="logo-container">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX////7vATymQD7uQD935781oTylwD8vgT7twDymwD//vr80nf81X7//fX+9en+9+z80W794qX+6r/+78/+8tf+6Ln+9+X+9uL8xTb8y1z8zmn95bD8yUz8ylX+89r8x0L92o3xqDsIAAAEcklEQVR4nO3di1riMBAFYEtAItIFRBAQkPd/yq276upy60w6ORO+cx4gw/9lei/p3R3DMAzDMMxR5rPDwCDjX2jY3zxPQwwmiT0PxMk6hsoq9w8TtO9uXtn5GiGeuIiGvkbYuwc36twW2Ah79w9IYm3r+yPsQRt1arkNfgqRjbo07tEPIbBRB9ZT+CHENerQGvgpRM3ii3mTfglBxKeMwmZ3A2jUmflm+E0ImcV+ViGCmFkIaNTcwvwHjezC7I2aX5h7FgHCzESEMO9pOESYdVvECHM2KkiYsVFRwnyNChNma1ScMNcsAoWZiEhhntNwqDDLLGKFOYhgYYZGRQvtDxpwoXmj4oXWs+hAaEz0ILQ9DXchNN0WfQgtG9WJ0HAWvQjtiG6EZo3qR2g1i46ERkRPQpvTcFdCk23Rl9CiUZ0JDWbRm7B7ojth56fh/oRdb4sOhR0TMwiH4oR+WUJ5KKSQQnwopJBCfCikkEJ8KKSQQu3PCt0N5U0YYqxW681ms15VsYs/FPsSxrDtz+uv8ep5fxdS/2nkSBjCbjE6GnP0tE7rWDfCEAbLM8MuBylGL8I4vXR3un7U96oPYVg9Xxl6v1KP7UEYBy0GPyin0YMwPrUaXfn/TQfC4b7l8C+qvxnjhcNzu9DjLIsUhvbAhqgpABaGazvRn3lWVMAK46uwxKt4d4MVho24xkZcAzuHiiLSElBhywPhz0gPi1DhVlVlW44wzlVVhMsYIYW6KZROIlCo2grfI9sSgcKhuo6kClAY2lwynY5oKSOcULmfeY9oXwOcw4RCZczhLqHQrgRhOCQUOkgKwYSLhEKLEoQJOxrZrgYnTHl7d1KCMNTXxzubuoQurZKEgjoUisIu/Z7b39PEtne6T2VfhFB7dfgeyRUibjtMKZytUFJh+a3Sf5HcNMUdLfSX+LK1boFXwC/qOqK1boFXwPrKueokVq5W6jorSRnk3UTtEVFyNIQKw1RZRrbwO/Ked9CduE2EVZDCsarKuByh7oAhXRYd+4T0TVHkTVgDK4wzcY2Z9EE++Cl3kPbpXl4C/LbJ8PiN0ksZyV+LQguDbFN8K+59muYHSJ5f7Ap8J6r5Be0fdm9V48OFVVi1u+1W616idSCsQtXmGYb2W2AehM1xcTy6loH2TW8fwqrFZ/PUQ/sQGoZCCinEh0IKKcTHi9DslMaLMDxeS+lnbfHazYyR+i+WXoTXLhFrCimkkEIKKaTwBoQ3f04THseXU/x56e1fWxiGQgopxIdCCinEh0IKKcSHQgopxIdCCinEh0IKKcSHQgopxIdCCinEh0IKKcSHQgopxKdT4cylUL4yxfkov3Vjm6Sl7/6PdGGVLElYU+xEVB/zMU7KunDHES2WnicJS7+fytJfm0bJt4haRLYMV4aoFxQ7F8nyt3mSstTtyQg/IGKdpFXDz2ThiRhTFn4/G+0aJN2n3ZopitSbLj4Bm5wQNymLMV/Ofhpii9VKLBPDVPZFN3Hms8MAl8PMqD8ZhmEYhik7vwFBhZVAZs/IKgAAAABJRU5ErkJggg=="
+				class="logo">
+			<span class="logo-text">Keep</span>
+		</div>
+		<div class="search-bar-container">
+			<input type="text" class="search-bar" placeholder="Search">
+		</div>
+		<div class="profile-container">
+			<img src="https://play-lh.googleusercontent.com/Du85nHDsJYS2KpL9lcLA5uBlNsXigJVey_5z1j1TrizdCrbORMT7BtjRjQb8A5Wj1g=w240-h480-rw" class="profile-picture">
+		</div>
+	</nav>
+</body>
+
+</html>
